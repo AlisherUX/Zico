@@ -1,0 +1,32 @@
+.footer-page {
+    margin-top: 43px;
+    padding: 29px 89px;
+    border-top: 1px solid #e8e8e8;
+    color: $dark;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: $InterBold;
+    @include flexBetween;
+    @include mediaMobileFirst(610){
+        padding: 15px 20px;
+        margin-top: 23px;
+    }
+}
+
+.footer-wrapper{
+    @include flexBetween;
+
+    @include mediaMobileFirst (510){
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__text{
+        text-align: center;
+    }
+}
+
+.footer-menu{
+    display: flex;
+    gap: 15px;
+}

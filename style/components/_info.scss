@@ -1,0 +1,58 @@
+.info {
+    margin-top: 43px;
+    background-color: $antiquaWhite;
+
+    @include mediaMobileFirst (900){
+        flex-direction: column;
+    }
+
+    &-img{
+        width:525px;
+
+        @include mediaMobileFirst (900){
+          width: 100%;
+        }
+    }
+
+    &-content {
+        padding: 98px 69px 118px 63px;
+
+        @include mediaMobileFirst (900){
+            padding:30px;
+        }
+        @include mediaMobileFirst (510){
+            padding:10px;
+        }
+
+        &__title {
+            font-weight: $InterBold;
+            color: $dark;
+            font-size: 40px;
+            line-height: 48px;
+
+            @include mediaMobileFirst(610){
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+    }
+
+    &-button {
+        margin-top: 31px;
+        width: 122px;
+        background-color: $violet;
+        border: none;
+        border-radius: $borderRadius;
+        @include flexBetween;
+        padding: 9px 11px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: $InterBold;
+        margin-left: auto;
+
+        @include mediaMobileFirst (900){
+           margin:21px auto;
+        }
+    }
+}

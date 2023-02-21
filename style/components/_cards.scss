@@ -1,0 +1,28 @@
+.cards{
+    margin-top: 43px;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 33px;
+
+&-item{
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(192, 189, 189, 0.25);
+border-radius:$borderRadius;
+
+&__img{
+    max-width: 300px;
+    width: 100%;
+}
+
+}
+}
+
+.cards-content{
+    padding: 18px 24px 25px 17px;
+
+    &__text{
+        margin-block:15px 22px;
+    }
+}

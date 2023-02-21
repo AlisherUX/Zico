@@ -1,0 +1,88 @@
+.header {
+  background-color: #fff;
+  width: 100%;
+}
+
+.header-top {
+  @include flexBetween;
+  padding: 36px 0 25px;
+  @include mediaMobileFirst(510){
+    padding:16px 0 15px;
+  }
+
+  &__logo {
+    font-size: 20px;
+    line-height: 24px;
+    color: $dark;
+    font-family: $InterRegular;
+  }
+
+  &__menu {
+    @include flexAlignCenter;
+    gap: 30px;
+
+    &-links {
+      font-size: 16px;
+      line-height: 19px;
+      color: $dark;
+      transition: 0.5s;
+
+      @include mediaMobileFirst(610) {
+        display: none;
+       }
+
+      &:hover {
+        color: $violet;
+      }
+    }
+  }
+}
+
+.search-form {
+  width: 97px;
+  height: 24px;
+  @include flexBetween;
+  gap: 11px;
+
+  @include mediaMobileFirst(610) {
+   display: none;
+  }
+
+  &__label {
+    display: block;
+
+    &-icon {
+      display: block;
+    }
+  }
+
+  &__input {
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+}
+
+.burger-menu{
+    width: 30px;
+    height: 30px;
+    background-color:$violet;
+    border-radius: 5px;
+    @include flexBetween;
+    flex-direction: column;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+    @include mediaMobileFirst(610){
+        display: flex;
+    }
+
+&__item{
+    width: 20px;
+    height: 2px;
+    background-color:$lightGray;
+}
+}

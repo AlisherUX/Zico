@@ -1,0 +1,64 @@
+.established-wrapper {
+    border: 1px solid #E2E2E2;
+    box-shadow: 0px 5px 4px rgba(221, 221, 221, 0.25);
+    border-radius: $borderRadius;
+    margin-top: 43px;
+
+    @include mediaMobileFirst(900){
+        flex-direction: column-reverse;
+        max-width: 500px;
+        width: 100%;
+        margin: 33px auto;
+    }
+}
+
+.established-content {
+    padding: 41px 37px 43px 52px;
+
+    @include mediaMobileFirst(900){
+        padding: 20px;
+    }
+
+    &__title {
+        color: $titleColor;
+        font-weight: $InterBold;
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    &__text {
+        color: $gray;
+        margin-block: 27px 30px;
+        font-size: 14px;
+        line-height: 17px;
+
+        @include mediaMobileFirst(610){
+            margin-block:17px 20px;
+        }
+    }
+
+    &__img {
+       display: block;
+
+       @include mediaMobileFirst(900){
+        max-width: 500px;
+        width: 100%;
+       }
+    }
+}
+
+.established-data {
+    @include flexBetween;
+    
+    &__time,
+    &__link {
+        font-size: 12px;
+        line-height: 15px;
+        color: $gray;
+    }
+    
+    &__link {
+        font-weight: $InterBold;
+        color: $titleColor;
+    }
+}

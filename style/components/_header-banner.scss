@@ -1,0 +1,79 @@
+.header-banner {
+  padding-block: 70px 74px;
+  background-color: $lightGray;
+
+  @include mediaMobileFirst(510) {
+    padding-block: 50px 54px;
+  }
+
+  &__wrapper {
+    @include mediaMobileFirst(900) {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+    @include mediaMobileFirst(510) {
+      gap: 10px;
+    }
+  }
+
+  &__content {
+    max-width: 476px;
+    width: 100%;
+
+    &-title {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 73px;
+      color: $dark;
+      max-width: 354px;
+      width: 100%;
+      position: relative;
+
+      @include mediaMobileFirst(900) {
+        text-align: center;
+        max-width: 100%;
+      }
+
+      @include mediaMobileFirst(510) {
+        font-size: 35px;
+        line-height: 53px;
+      }
+
+      &::after {
+        content: url(../images/coffee.png);
+        width: 70px;
+        height: 67px;
+        transform: rotate(-10deg);
+        position: absolute;
+        top: 65px;
+        right: 30%;
+
+        @include mediaMobileFirst(900) {
+          display: none;
+        }
+      }
+    }
+
+    &-img {
+      max-width: 476px;
+      width: 100%;
+    }
+
+    &-text {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 36px;
+      margin-top: 19px;
+
+      @include mediaMobileFirst(900) {
+        text-align: center;
+        max-width: 100%;
+      }
+      @include mediaMobileFirst(510) {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
